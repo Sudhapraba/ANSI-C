@@ -2,7 +2,7 @@
 #include<conio.h>
 void main()
 {
-int i,j,n;k=0;
+int i,j,n,k=0;
 clrscr();
 printf("Enter the number of rows:\n");
 scanf("%d",&n);
@@ -17,5 +17,6 @@ for(i=1;i<=n;++i,k=0)
  printf("* ");
  }
 printf("\n");
+}
 getch();
 }
