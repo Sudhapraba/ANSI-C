@@ -2,6 +2,7 @@
 #include<conio.h>
 void main()
 {
+int i,j,n;
 clrscr();
 printf("Enter the value:\n");
 scanf("%d",&n);
