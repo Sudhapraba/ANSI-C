@@ -2,19 +2,39 @@
 #include<conio.h>
 void main()
 {
-int amount,notes,i;
-int R[9]={2000,500,200,100,50,20,10,5,1};
-clrcsr();
-printf("\nEnter the amount=");
-scanf("%d",&amount);
-for(i=0;i<9;i++)
-{
-notes=amount/R[i];
-if(notes)
-{
-amount=amount%R[i];
-printf("%d*%d=%d\n",notes,R[i],notes*R[i]);
-}
-}
-getch();
+  char choice;
+  float amount;
+  clrscr();
+  printf("Currency conversion to INR \n");
+  printf("Enter the choice to convert:\n");
+  printf("A.Euro\n");
+  printf("B.Dollar\n");
+  printf("C.Franc\n");
+  printf("D.Dirham\n");
+  printf("E.Pound\n");
+  choice=getchar();
+  printf("Enter the amount:");
+  scanf("%f",&amount);
+  switch(choice)
+  {
+    case 'A':
+      printf("Currency value in INR=%6.2f",amount*85.64);
+      break;
+    case 'B':
+      printf("Currency value in INR=%6.2f",amount*74.97);
+      break;
+    case 'C':
+      printf("Currency value in INR=%6.2f",amount*79.82);
+      break;
+    case 'D':
+      printf("Currency value in INR=%6.2f",amount*20.39);
+      break;
+    case 'E':
+      printf("Currency value in INR=%6.2f",amount*94.15);
+      break;
+    default:
+      printf("please enter the valid choice");
+      break;
+   }
+  getch();
 }
