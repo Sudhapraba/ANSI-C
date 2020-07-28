@@ -9,7 +9,7 @@ clrscr();
 printf("To calculate the total distance travelled by a vehicle:");
 printf("\nNo of intervals: ");
 scanf("%d",&interval);
-for(counter = 1; counter <=interval; counter++)
+for(counter = 1;counter <=interval;counter++)
 {
 printf("\n AT T%d TIME(sec) : ",counter);
 scanf("%d",&time);
