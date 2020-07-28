@@ -3,14 +3,22 @@
 #include<math.h>
 void main()
 {
-int x1,x2,y1,y2;
-float D;
+int interval,counter,time;
+float acc, dis=0, vel;
 clrscr();
-printf("Enter the values of x1 and y1:\n");
-scanf("%d %d",&x1,&y1);
-printf("Enter the values of x2 and y2:\n");
-scanf("%d %d",&x2,&y2);
-D=sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
-printf("The distance between two points:%0.3f",D);
+printf("To calculate the total distance travelled by a vehicle:");
+printf("\nNo of intervals: ");
+scanf("%d",&interval);
+for(counter = 1; counter <=interval; counter++)
+{
+printf("\n AT T%d TIME(sec) : ",counter);
+scanf("%d",&time);
+printf("\tVELOCITY AT %d sec (m/sec) : ",time);
+scanf("%f",&vel);
+printf("\tACCLERATION AT %d sec (m/sec^2): ",time);
+scanf("%f",&acc);
+dis+= (vel*time + (acc*pow(time,2))/2);
+}
+printf("\nTotal distance travelled by a vehicle in %d interval of time : %f",interval,dis);
 getch();
 }
